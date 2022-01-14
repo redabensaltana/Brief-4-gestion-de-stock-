@@ -1,0 +1,151 @@
+
+body{
+    margin: 0px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 70px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo{
+    height: 42px;
+    margin-left: 30px;
+}
+
+.searching{
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.searching input::placeholder{
+    font-family: saira semicondensed;
+    color: black;
+    font-weight: 100;
+    font-size: 16px;
+}
+
+.searching input{
+    border: 0px;
+    width: 140px;
+}
+
+#magnifying-glass{
+    height :24px;
+     margin-left: 20px;
+}
+
+#filter-icon{
+    height: 19px;
+     margin-left: 20px;
+     display: none;
+}
+
+.filter{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 110px;
+    background-color: white;
+    height: 94px;
+    width: 90%;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.justify-filter{
+    display: flex;
+    flex-direction: column;
+}
+
+.products-container{
+    display: flex;
+    flex-direction: column;
+   background-color: #f6f6f6;
+    border-radius: 5px; 
+    padding: 22px 18px;
+    row-gap: 20px;
+    width: 80%;
+}
+
+.products-infos{
+    height: 50px;
+    padding-left: 24px;
+    padding-right: 24px;
+    background-color: #D7D6FF;
+    border-radius: 5px;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 3fr repeat(7, 1fr) 0.5fr;
+}
+
+.products{
+    height: 50px;
+    padding-left: 24px;
+    padding-right: 24px;
+    background-color: white;
+    border-radius: 5px;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 3fr repeat(5, 1fr) 0.5fr 0.5fr 1fr 0.5fr;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.151);
+}
+
+@media (max-width : 900px) {
+    .logo{
+        height: 30px;
+    }
+    #filter-icon{
+        display: block;
+    }
+    #magnifying-glass{
+        height: 19px;
+    }
+
+    .filter{
+        display: none;
+    }
+
+    .removable{
+        display: none;
+    }
+    
+    .products-infos{
+        grid-template-columns: 1fr 3fr 1fr 1fr 0.5fr;
+    }
+
+    .products{
+        grid-template-columns: 1fr 3fr  0.5fr 0.5fr 1fr 0.5fr;
+    }
+}
+
+/*//////////////////// main menu end /////////////////*/
+
+.new-item{
+
+    height: 740px;
+    width: 482px;
+    background-color: #F6F6F6;
+    border-radius: 10px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-title{
+    font-size: 36px;
+    font-family: saira semicondensed;
+}
+
+.product-img-empty{
+    display: flex;
+    height: 210px;
+    width: 270px;
+    border-radius: 10px;
+    background-color: #D8E3EC;
+    align-items: center;
+    justify-content: center;
+}

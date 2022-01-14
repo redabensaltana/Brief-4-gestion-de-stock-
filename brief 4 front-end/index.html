@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+</head>
+<body style="background-color: rgb(43, 43, 43);">
+    
+    <section class="navbar">
+        <img class="logo" src="./icons/logo.svg" alt="">
+        <div class="searching">
+            <input style="outline:none;"  placeholder="search by ref/name"></input>
+            <img id="magnifying-glass" src="icons/magnifying-glass-solid.svg" alt="">
+            <img id="filter-icon" src="icons/filter-solid.svg" alt="">
+        </div>
+    </section>
+
+    <section style="display: flex; justify-content: center;">
+        <div class="filter">
+
+            <p style="font-weight: 800; font-size: 20px;">Filter by:</p>
+
+            <div class="justify-filter">
+                <label for="Category">Category</label>
+                <select name="Category" id="Category" >
+                    <option value="rings">rings</option>
+                    <option value="bracelets">bracelets</option>
+                    <option value="necklaces">necklaces</option>
+                </select>
+            </div>
+           
+            <div class="justify-filter">
+                <label for="Material">Material</label>
+                <select name="Material" id="Material" >
+                    <option value="silver">silver</option>
+                    <option value="gold">gold</option>
+                    <option value="platinum">platinum</option>
+                    <option value="diamond">diamond</option>
+                </select>
+            </div>
+           
+            <div class="justify-filter">
+                <label for="Size">Size</label>
+                <select name="Size" id="Size" >
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="7">7</option>
+                </select>
+            </div>
+
+            <div class="justify-filter">
+                <label for="Price">Price</label>
+                <select name="Price" id="Price" >
+                    <option value="range1">range1</option>
+                    <option value="range2">range2</option>
+                    <option value="range3">range3</option>
+                </select>
+            </div>
+
+            <div class="justify-filter">
+                <label for="Stock">Stock</label>
+                <select name="Stock" id="Stock">
+                    <option value="range1">range1</option>
+                    <option value="range2">range2</option>
+                    <option value="range3">range3</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <section style="display: flex; justify-content: center;margin-block: 110px;">
+        <div class="products-container">
+            <div class="products-infos">
+                <p>Ref</p>
+                <p>Name</p>
+                <p class="removable">Category</p>
+                <p class="removable">Material</p>
+                <p class="removable">Size</p>
+                <p class="removable">Price</p>
+                <p class="removable">Stock</p>
+                <p style="justify-self: center;">Edit</p>
+                <p style="justify-self: center;">View</p>
+                <img style="width: 19px; justify-self: end;" src="./icons/bouton-ajouter.png" alt="">
+            </div>
+
+            <div class="products">
+                <p>#1</p>
+                <p>Silver ring - letter B - </p>
+                <p class="removable">Ring</p>
+                <p class="removable">Silver</p>
+                <p class="removable">7</p>
+                <p class="removable">4.99 $</p>
+                <p class="removable">13 pcs</p>
+                <img style="justify-self: center;" src="./icons/edit.svg" alt="">
+                <img style="justify-self: center;" src="./icons/delete.svg" alt="">
+                <img style="justify-self: center;" src="./icons/view.svg" alt="">
+            </div>
+            <div class="products">
+                <p>#1</p>
+                <p>Silver ring - letter B - </p>
+                <p class="removable">Ring</p>
+                <p class="removable">Silver</p>
+                <p class="removable">7</p>
+                <p class="removable">4.99 $</p>
+                <p class="removable">13 pcs</p>
+                <img style="justify-self: center;" src="./icons/edit.svg" alt="">
+                <img style="justify-self: center;" src="./icons/delete.svg" alt="">
+                <img style="justify-self: center;" src="./icons/view.svg" alt="">
+            </div>
+            <div class="products">
+                <p>#1</p>
+                <p>Silver ring - letter B - </p>
+                <p class="removable">Ring</p>
+                <p class="removable">Silver</p>
+                <p class="removable">7</p>
+                <p class="removable">4.99 $</p>
+                <p class="removable">13 pcs</p>
+                <img style="justify-self: center;" src="./icons/edit.svg" alt="">
+                <img style="justify-self: center;" src="./icons/delete.svg" alt="">
+                <img style="justify-self: center;" src="./icons/view.svg" alt="">
+            </div>
+            <div class="products">
+                <p>#1</p>
+                <p>Silver ring - letter B - </p>
+                <p class="removable">Ring</p>
+                <p class="removable">Silver</p>
+                <p class="removable">7</p>
+                <p class="removable">4.99 $</p>
+                <p class="removable">13 pcs</p>
+                <img style="justify-self: center;" src="./icons/edit.svg" alt="">
+                <img style="justify-self: center;" src="./icons/delete.svg" alt="">
+                <img style="justify-self: center;" src="./icons/view.svg" alt="">
+            </div>
+            <div class="products">
+                <p>#1</p>
+                <p>Silver ring - letter B - </p>
+                <p class="removable">Ring</p>
+                <p class="removable">Silver</p>
+                <p class="removable">7</p>
+                <p class="removable">4.99 $</p>
+                <p class="removable">13 pcs</p>
+                <img style="justify-self: center;" src="./icons/edit.svg" alt="">
+                <img style="justify-self: center;" src="./icons/delete.svg" alt="">
+                <img style="justify-self: center;" src="./icons/view.svg" alt="">
+            </div>
+            <div class="products">
+                <p>#1</p>
+                <p>Silver ring - letter B - </p>
+                <p class="removable">Ring</p>
+                <p class="removable">Silver</p>
+                <p class="removable">7</p>
+                <p class="removable">4.99 $</p>
+                <p class="removable">13 pcs</p>
+                <img style="justify-self: center;" src="./icons/edit.svg" alt="">
+                <img style="justify-self: center;" src="./icons/delete.svg" alt="">
+                <img style="justify-self: center;" src="./icons/view.svg" alt="">
+            </div>
+            <div class="products">
+                <p>#1</p>
+                <p>Silver ring - letter B - </p>
+                <p class="removable">Ring</p>
+                <p class="removable">Silver</p>
+                <p class="removable">7</p>
+                <p class="removable">4.99 $</p>
+                <p class="removable">13 pcs</p>
+                <img style="justify-self: center;" src="./icons/edit.svg" alt="">
+                <img style="justify-self: center;" src="./icons/delete.svg" alt="">
+                <img style="justify-self: center;" src="./icons/view.svg" alt="">
+            </div>
+            <div class="products">
+                <p>#1</p>
+                <p>Silver ring - letter B - </p>
+                <p class="removable">Ring</p>
+                <p class="removable">Silver</p>
+                <p class="removable">7</p>
+                <p class="removable">4.99 $</p>
+                <p class="removable">13 pcs</p>
+                <img style="justify-self: center;" src="./icons/edit.svg" alt="">
+                <img style="justify-self: center;" src="./icons/delete.svg" alt="">
+                <img style="justify-self: center;" src="./icons/view.svg" alt="">
+            </div>
+            <div class="products">
+                <p>#1</p>
+                <p>Silver ring - letter B - </p>
+                <p class="removable">Ring</p>
+                <p class="removable">Silver</p>
+                <p class="removable">7</p>
+                <p class="removable">4.99 $</p>
+                <p class="removable">13 pcs</p>
+                <img style="justify-self: center;" src="./icons/edit.svg" alt="">
+                <img style="justify-self: center;" src="./icons/delete.svg" alt="">
+                <img style="justify-self: center;" src="./icons/view.svg" alt="">
+            </div>
+            <div class="products">
+                <p>#1</p>
+                <p>Silver ring - letter B - </p>
+                <p class="removable">Ring</p>
+                <p class="removable">Silver</p>
+                <p class="removable">7</p>
+                <p class="removable">4.99 $</p>
+                <p class="removable">13 pcs</p>
+                <img style="justify-self: center;" src="./icons/edit.svg" alt="">
+                <img style="justify-self: center;" src="./icons/delete.svg" alt="">
+                <img style="justify-self: center;" src="./icons/view.svg" alt="">
+            </div>
+            <div class="products">
+                <p>#1</p>
+                <p>Silver ring - letter B - </p>
+                <p class="removable">Ring</p>
+                <p class="removable">Silver</p>
+                <p class="removable">7</p>
+                <p class="removable">4.99 $</p>
+                <p class="removable">13 pcs</p>
+                <img style="justify-self: center;" src="./icons/edit.svg" alt="">
+                <img style="justify-self: center;" src="./icons/delete.svg" alt="">
+                <img style="justify-self: center;" src="./icons/view.svg" alt="">
+            </div>
+            <div class="products">
+                <p>#1</p>
+                <p>Silver ring - letter B - </p>
+                <p class="removable">Ring</p>
+                <p class="removable">Silver</p>
+                <p class="removable">7</p>
+                <p class="removable">4.99 $</p>
+                <p class="removable">13 pcs</p>
+                <img style="justify-self: center;" src="./icons/edit.svg" alt="">
+                <img style="justify-self: center;" src="./icons/delete.svg" alt="">
+                <img style="justify-self: center;" src="./icons/view.svg" alt="">
+            </div>
+
+             </div>
+    </section>
+
+    <section style="display: flex; justify-content: center;margin-block: 110px;">
+        <div class="new-item">
+            <p class="menu-title">New Item</p>
+            <div class="product-img-empty">
+                <img style="height : 77px" src="./icons/cloud-arrow-up-solid.svg" alt="">
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
