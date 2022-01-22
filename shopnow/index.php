@@ -1,3 +1,7 @@
+    <?php
+        include_once 'includes/dbhandler.php';
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +31,9 @@
         </div>
     </section>
 
-    <form class="form-filter" style="display: flex; justify-content: center;">
+<!-- -----------------FILTER--------------------------- -->
+
+    <form class="form-filter">
         
         <div class="filter">
 
@@ -68,9 +74,9 @@
                 <label for="Price">Price</label>
                 <select name="Price" id="Price" >
                     <option value="nothing">------------</option>
-                    <option value="range1">range1</option>
-                    <option value="range2">range2</option>
-                    <option value="range3">range3</option>
+                    <option value="range1">10$ and less</option>
+                    <option value="range2">10$ to 100$</option>
+                    <option value="range3">over 100$</option>
                 </select>
             </div>
 
@@ -78,14 +84,16 @@
                 <label for="Stock">Stock</label>
                 <select name="Stock" id="Stock">
                     <option value="nothing">------------</option>
-                    <option value="range1">range1</option>
-                    <option value="range2">range2</option>
-                    <option value="range3">range3</option>
+                    <option value="range1">10 pcs and less</option>
+                    <option value="range2">10 pcs to 50 pcs</option>
+                    <option value="range3">over 50 pcs</option>
                 </select>
             </div>
             <button class="filter-button" type="submit">enter</button>
         </div>
     </form>
+
+<!-- -----------------PRODUCTS--------------------------- -->
 
     <section style="display: flex; justify-content: center;margin-block: 110px;">
         <div class="products-container">
@@ -131,6 +139,9 @@
 
              </div>
     </section>
+
+
+<!-- -----------------DISPLAY PRODUCT--------------------------- -->
 
     <div style="display: flex; justify-content: center;">
     <section class="position-lightbox view-form" style="display: none;">
@@ -192,54 +203,76 @@
         </div>
     </section>
     </div>
+    
+<!-- -----------------ADD ITEM--------------------------- -->
 
-    <form style="display: flex; justify-content: center;" action="">
+
+    <form style="display: flex; justify-content: center;" action="index.php" method="post">
         <section class="position-lightbox add-form" style="display: none;">
         <div class="new-item">
             <div class="close-button">
                 <img style="height: 19px;width: 19px;" src="./icons/circle-xmark-regular.svg" alt="">
             </div>
             <p class="menu-title">New Item</p>
-            <div class="product-img-empty">
+
+            <input style="display:none;" type="file" id="file-add">
+            <label for="file" class="product-img-empty">
                 <img style="height : 77px" src="./icons/cloud-arrow-up-solid.svg" alt="">
-            </div>
+            </label>
+            
             <div class="row">
-                <div class="refdiv">
+                <!-- <div class="refdiv">
                     <div class="itemsinfo"><label for="Ref">Ref :</label></div>
                     <input type="text" class="form-control" id="Ref" name="ref"/>
-                </div>
+                </div> -->
                 <div class="namediv">
                     <div class="itemsinfo"><label for="name">Name :</label></div>
-                    <input type="text" class="form-control" id="name" name="name"/>
+                    <input type="text" class="form-control" id="name" name="name">
                 </div>
             </div>
 
             <div class="secondrow">
                 <div class="categorydiv">
                     <div class="itemsinfo"><label for="category">Category :</label></div>
-                    <input type="text" class="form-control" id="category" name="category"/>
+                    <select  type="text" class="form-control" id="category" name="category">
+                        <option value="nothing"></option>
+                        <option value="1">rings</option>
+                        <option value="2">bracelets</option>
+                        <option value="3">necklaces</option>
+                    </select>
                 </div>
                 <div class="materialdiv">
                     <div class="itemsinfo"><label for="material">Material :</label></div>
-                    <input type="text" class="form-control" id="material" name="material"/>
+                    <select  type="text" class="form-control" id="material" name="material">
+                        <option value="nothing"></option>
+                        <option value="1">silver</option>
+                        <option value="2">gold</option>
+                        <option value="3">platinum</option>
+                        <option value="4">diamond</option>
+                    </select>
                 </div>
             </div>
 
             <div class="thirdrow">
                 <div class="sizediv">
                     <div class="itemsinfo"><label for="Size">Size :</label></div>
-                    <input type="text" class="form-control" id="Size" name="Size"/>
+                    <select  type="text" class="form-control" id="size" name="size">
+                        <option value="nothing"></option>
+                        <option value="1">4</option>
+                        <option value="2">5</option>
+                        <option value="3">7</option>
+                    </select>
                 </div>
                 <div class="pricediv">
                     <div class="itemsinfo"><label for="price">Price :</label></div>
-                    <input type="text" class="form-control" id="price" name="price"/>
+                    <input  type="number" class="form-control" id="price" name="price">
                 </div>
             </div>
             
             <div class="lastrow">
                 <div class="stockdiv">
                     <div class="itemsinfo"><label for="stock">Stock :</label></div>
-                    <input type="text" class="form-control" id="stock" name="stock"/>
+                        <input type="number" class="form-control" id="stock" name="stock">
                 </div>
             </div>
 
@@ -251,6 +284,8 @@
     </section>
 </form>
     
+<!-- -----------------EDIT ITEM--------------------------- -->
+
 
 <form style="display: flex; justify-content: center;" action="">
     <section class="position-lightbox edit-form" style="display: none;">
@@ -259,9 +294,11 @@
                 <img style="height: 19px;width: 19px;" src="./icons/circle-xmark-regular.svg" alt="">
             </div>
             <p class="menu-title">Edit Item</p>
-            <div class="product-img-empty">
+
+            <input style="display:none;" type="file" id="file-add">
+            <label for="file" class="product-img-empty">
                 <img style="height : 77px" src="./icons/cloud-arrow-up-solid.svg" alt="">
-            </div>
+            </label>
 
             <div class="row">
                 <div class="refdiv">
@@ -269,36 +306,52 @@
                 </div>
                 <div class="namediv">
                     <div class="itemsinfo"><label for="name">Name :</label></div>
-                    <input placeholder="Silver Ring -letter B-" type="text" class="form-control" id="name" name="name"/>
+                    <input type="text" class="form-control" id="name" name="name">
                 </div>
             </div>
 
             <div class="secondrow">
                 <div class="categorydiv">
                     <div class="itemsinfo"><label for="category">Category :</label></div>
-                    <input placeholder="Ring" type="text" class="form-control" id="category" name="category"/>
+                    <select  type="text" class="form-control" id="category" name="category">
+                        <option value="nothing"></option>
+                        <option value="1">rings</option>
+                        <option value="2">bracelets</option>
+                        <option value="3">necklaces</option>
+                    </select>
                 </div>
                 <div class="materialdiv">
                     <div class="itemsinfo"><label for="material">Material :</label></div>
-                    <input placeholder="Silver" type="text" class="form-control" id="material" name="material"/>
+                    <select  type="text" class="form-control" id="material" name="material">
+                        <option value="nothing"></option>
+                        <option value="1">silver</option>
+                        <option value="2">gold</option>
+                        <option value="3">platinum</option>
+                        <option value="4">diamond</option>
+                    </select>
                 </div>
             </div>
 
             <div class="thirdrow">
                 <div class="sizediv">
                     <div class="itemsinfo"><label for="Size">Size :</label></div>
-                    <input placeholder="7" type="text" class="form-control" id="Size" name="Size"/>
+                    <select  type="text" class="form-control" id="size" name="size">
+                        <option value="nothing"></option>
+                        <option value="1">4</option>
+                        <option value="2">5</option>
+                        <option value="3">7</option>
+                    </select>
                 </div>
                 <div class="pricediv">
                     <div class="itemsinfo"><label for="price">Price :</label></div>
-                    <input placeholder="4.99$" type="text" class="form-control" id="price" name="price"/>
+                    <input  type="number" class="form-control" id="price" name="price">
                 </div>
             </div>
             
             <div class="lastrow">
                 <div class="stockdiv">
                     <div class="itemsinfo"><label for="stock">Stock :</label></div>
-                    <input placeholder="13" type="text" class="form-control" id="stock" name="stock"/>
+                        <input type="number" class="form-control" id="stock" name="stock">
                 </div>
             </div>
 

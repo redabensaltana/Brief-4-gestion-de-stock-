@@ -46,16 +46,20 @@ function close_lightbox(){
 
 //////////////////////////////////////////////
 
-
+const filter = document.querySelector('.form-filter');
 const filter_icon = document.getElementById('filter-icon');
-const filter = document.querySelector('.filter');
 filter_icon.addEventListener('click',function(){
-
-    if(filter.style.display == 'none'){
-        filter.style.display = 'flex';
-    }else if(filter.style.display == 'none'){
-        filter.style.display = 'none'
-    }
-        
+    filter.classList.toggle('show')
 })
+
+// const filter_icon = document.getElementById('filter-icon');
+// filter_icon.addEventListener('click',function(){
+//     const filter = document.querySelector('.form-filter');
+//     if(filter.style.display == 'none'){
+//         filter.style.display = 'flex';
+//     }else{  
+//         filter.style.display = 'none'
+//     }
+        
+// })
 
