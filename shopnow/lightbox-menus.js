@@ -62,4 +62,3 @@ filter_icon.addEventListener('click',function(){
 //     }
         
 // })
-

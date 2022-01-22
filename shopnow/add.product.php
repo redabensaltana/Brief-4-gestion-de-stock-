@@ -8,24 +8,18 @@
      $name = $_POST['name'];
      $category = $_POST['category'];
      $material = $_POST['material'];
-     $name = $_POST['name'];
-     $name = $_POST['name'];
-     $name = $_POST['name'];
+     $size = $_POST['size'];
+     $price = $_POST['price'];
+     $stock = $_POST['stock'];
+     $file = $_POST['file'];
+
+
+     $add_product = "INSERT INTO shopnowdb (Name, Category, Material, Size, Price,Stock,img) VALUES ('$name','$category','$material','$size','$price','$stock','$file');";
+
+    mysqli_query($conn, $add_product);
+
+    header('Location:index.php');
+
  }
 
-
-
 ?>
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body style="background-color:red;">
-    
-</body>
-</html> -->
