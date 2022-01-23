@@ -128,6 +128,8 @@
                 <img class="edit" src="./icons/edit.svg" alt="">
                 <img class="delete" src="./icons/delete.svg" alt="">
                 <img class="view" src="./icons/view.svg"
+
+            
                 data-ref="<?= $product['Ref'] ?>"  
                 data-name="<?= $product['Name'] ?>"
                 data-category="<?= $product['Category'] ?>"
@@ -164,43 +166,43 @@
 
                 <div class="display-infos">
                     
-                    <div class="info-title">Silver Ring -letter B-</div>
+                    <div class="info-title catch-name"></div>
                     <div class="info-details">
 
                         <div class="info-detail">
                             <p class="fake-label">Ref</p>
-                            <div class="info-container">
-                                #1
+                            <div class="info-container catch-ref">
+                                
                             </div>
                         </div>
                         <div class="info-detail">
                             <p class="fake-label">Material</p>
-                            <div class="info-container">
-                                Silver
+                            <div class="info-container catch-material">
+                                
                             </div>
                         </div>
                         <div class="info-detail">
                             <p class="fake-label">Category</p>
-                            <div class="info-container">
-                                Ring
+                            <div class="info-container catch-category">
+
                             </div>
                         </div>
                         <div class="info-detail">
                             <p class="fake-label">Price</p>
-                            <div class="info-container">
-                                4.99
+                            <div class="info-container catch-price">
+                                
                             </div>
                         </div>
                         <div class="info-detail">
                             <p class="fake-label">Size</p>
-                            <div class="info-container">
-                                7
+                            <div class="info-container catch-size">
+                                
                             </div>
                         </div>
                         <div class="info-detail">
                             <p class="fake-label">Stock</p>
-                            <div class="info-container">
-                                13
+                            <div class="info-container catch-stock">
+                                
                             </div>
                         </div>
                     </div>

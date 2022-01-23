@@ -15,6 +15,7 @@ edit.forEach(function(element){
     element.addEventListener('click',display_edit_form)
 })
 
+
 function display_edit_form(){
     form = document.querySelector('.edit-form')
     form.style.display = 'flex';
@@ -24,12 +25,26 @@ function display_edit_form(){
 var view = document.querySelectorAll('.view')
 
 view.forEach(function(element){
-    element.addEventListener('click',display_view_form)
+    element.addEventListener('click',function(){
+        form = document.querySelector('.view-form')
+        form.style.display = 'flex';
+        
+        document.querySelector(".catch-name").textContent = element.dataset.name;
+        document.querySelector(".catch-ref").textContent = "#"+element.dataset.ref;
+        document.querySelector(".catch-material").textContent = element.dataset.material;
+        document.querySelector(".catch-category").textContent = element.dataset.category;
+        document.querySelector(".catch-price").textContent = element.dataset.price;
+        document.querySelector(".catch-size").textContent = element.dataset.size;
+        document.querySelector(".catch-stock").textContent = element.dataset.stock;
+
+    })
+
 });
 
 function display_view_form(){
     form = document.querySelector('.view-form')
     form.style.display = 'flex';
+    document.querySelector(".catch-ref").textContent = view.dataset.ref;
 }
 
 ///////////////////////////////////////////////////

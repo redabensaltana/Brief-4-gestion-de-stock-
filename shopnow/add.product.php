@@ -5,6 +5,7 @@
 <?php
  
  if($_SERVER['REQUEST_METHOD']=='POST'){
+
      $name = $_POST['name'];
      $category = $_POST['category'];
      $material = $_POST['material'];
