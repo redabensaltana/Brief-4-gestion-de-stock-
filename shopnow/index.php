@@ -183,6 +183,7 @@
             </div>
 
                 <div class="display-img">
+                    <img style="width: 100%;height:100%;object-fit:contain" src="./img/B.png" alt="">
                 </div>
 
                 <div class="display-infos">
@@ -235,7 +236,7 @@
 <!-- -----------------ADD ITEM--------------------------- -->
 
 
-    <form style="display: flex; justify-content: center;" action="add.product.php" method="post">
+    <form style="display: flex; justify-content: center;" action="add.product.php" method="post"  enctype="multipart/form-data">
         <section class="position-lightbox add-form" style="display: none;">
         <div class="new-item">
             <div class="close-button">
@@ -312,7 +313,7 @@
 <!-- -----------------EDIT ITEM--------------------------- -->
 
 
-<form style="display: flex; justify-content: center;" action="edit.product.php" method="post">
+<form style="display: flex; justify-content: center;" action="edit.product.php" method="post"  enctype="multipart/form-data">
     <section class="position-lightbox edit-form" style="display: none;">
         <div class="new-item">
             <div class="close-button">

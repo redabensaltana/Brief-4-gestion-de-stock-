@@ -43,6 +43,7 @@ view.forEach(function(element){
         form = document.querySelector('.view-form')
         form.style.display = 'flex';
         
+        document.querySelector(".display-img img").setAttribute('src',"products.images/"+element.dataset.img);
         document.querySelector(".catch-name").textContent = element.dataset.name;
         document.querySelector(".catch-ref").textContent = "#"+element.dataset.ref;
         document.querySelector(".catch-material").textContent = element.dataset.material;
