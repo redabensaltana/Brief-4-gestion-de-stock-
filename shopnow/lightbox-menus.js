@@ -12,14 +12,28 @@ function display_add_form(){
 var edit = document.querySelectorAll('.edit')
 
 edit.forEach(function(element){
-    element.addEventListener('click',display_edit_form)
+    element.addEventListener('click',function(){
+        form = document.querySelector('.edit-form')
+        form.style.display = 'flex';
+        document.querySelector('.ref-hidden').value = element.dataset.ref;
+        document.querySelector('.name-hidden').value = element.dataset.name;
+        document.querySelector('.category-hidden').value = element.dataset.category;
+        document.querySelector('.material-hidden').value = element.dataset.material;
+        document.querySelector('.size-hidden').value = element.dataset.size;
+        document.querySelector('.price-hidden').value = element.dataset.price;
+        document.querySelector('.stock-hidden').value = element.dataset.stock;
+        // document.querySelector('.img-hidden').value = element.dataset.img;
+
+
+        // console.log(document.querySelector('.ref-hidden').value); 
+    })
 })
 
 
-function display_edit_form(){
-    form = document.querySelector('.edit-form')
-    form.style.display = 'flex';
-}
+// function display_edit_form(){
+    
+
+// }
 ///////////////////////////////////////////////////
 
 var view = document.querySelectorAll('.view')
@@ -41,11 +55,11 @@ view.forEach(function(element){
 
 });
 
-function display_view_form(){
-    form = document.querySelector('.view-form')
-    form.style.display = 'flex';
-    document.querySelector(".catch-ref").textContent = view.dataset.ref;
-}
+// function display_view_form(){
+//     form = document.querySelector('.view-form')
+//     form.style.display = 'flex';
+//     document.querySelector(".catch-ref").textContent = view.dataset.ref;
+// }
 
 ///////////////////////////////////////////////////
 
@@ -76,4 +90,5 @@ filter_icon.addEventListener('click',function(){
 //         filter.style.display = 'none'
 //     }
         
-// })
+// });
+

@@ -127,9 +127,26 @@ body{
    justify-self: center;
 }
 
+.delete-button{
+    border : 0px;
+    width: 19px;
+}
+
 .form-filter{
     display: flex;
     justify-content: center;
+}
+
+.submit-delete{
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+}
+
+.clickable{
+    cursor: pointer;
 }
 
 @media (max-width : 1100px) {

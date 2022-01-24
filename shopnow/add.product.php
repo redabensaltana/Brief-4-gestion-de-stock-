@@ -15,8 +15,7 @@
      $file = $_POST['file'];
 
 
-     $add_product = "INSERT INTO shopnowdb (Name, Category, Material, Size, Price,Stock,img) VALUES ('$name','$category','$material','$size','$price','$stock','$file');";
-
+    $add_product = "INSERT INTO shopnowdb (Name, Category, Material, Size, Price,Stock,img) VALUES ('$name','$category','$material','$size','$price','$stock','$file');";
     mysqli_query($conn, $add_product);
 
     header('Location:index.php');
