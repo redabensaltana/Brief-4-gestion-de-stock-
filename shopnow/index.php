@@ -2,11 +2,6 @@
     include_once 'includes/dbhandler.php';
 ?>
 
-<?php
-    $display_all_products = "SELECT * FROM shopnowdb;";
-    $result = mysqli_query($conn, $display_all_products);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,10 +17,17 @@
 <body style="background-color: rgb(43, 43, 43);">
     
     <section class="navbar">
+        <form action="" method="get">
+        <input type="hidden" name="allProducts" value="">
+        <button class="logo-button" type="submit">
         <img class="logo" src="./icons/logo.svg" alt="">
+        </button>
+
+        </form>
+        
         <div class="searching">
-            <form action="">
-                <input id="search-input" style="outline:none;"  placeholder="search by name"></input>
+            <form action="" method="get">
+                <input id="search-input" style="outline:none;" name="search" value=""  placeholder="search by name"></input>
                 <label for="search-input">
                     <img id="magnifying-glass" src="icons/magnifying-glass-solid.svg" alt="">
                 </label>
@@ -116,7 +118,27 @@
                 <img class="add" style="width: 19px; justify-self: end;" src="./icons/bouton-ajouter.png" alt="">
             </div>
             
-            <?php while($product = mysqli_fetch_assoc($result)):?>
+            <?php
+            if(isset($_GET['search'])){
+
+                $search_char = $_GET['search'];
+                $query = "SELECT * FROM shopnowdb WHERE Name LIKE '%$search_char%';";
+                $result = mysqli_query($conn,$query);
+
+            }
+            elseif(isset($_GET['allProducts'])){
+                
+                $display_all_products = "SELECT * FROM shopnowdb;";
+                $result = mysqli_query($conn, $display_all_products); 
+            }
+            else{
+
+                $display_all_products = "SELECT * FROM shopnowdb;";
+                $result = mysqli_query($conn, $display_all_products);
+
+            }
+
+            while($product = mysqli_fetch_assoc($result)):?>
             <div class="products">
                 <p>#<?= $product['Ref'] ?></p>
                 <p class="p-name"><?= $product['Name'] ?></p>
@@ -164,6 +186,8 @@
                 alt="view item">
             </div>
             <?php endwhile;?>
+ 
+            
 
         </div>
     </section>
