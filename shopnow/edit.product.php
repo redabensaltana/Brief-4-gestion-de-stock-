@@ -13,7 +13,9 @@ if($_SERVER['REQUEST_METHOD']=='POST') {
      $size = $_POST['size'];
      $price = $_POST['price'];
      $stock = $_POST['stock'];
-     $file = $_POST['file'];
+     $file = $_FILES["file"]["name"];
+
+     move_uploaded_file($_FILES["file"]["tmp_name"], 'products.images/'.$file);
 
     $rowEdit = "UPDATE shopnowdb SET Name ='$name' , Category='$category' , Material= '$material' , Size='$size' , Price='$price' , Stock='$stock' , img='$file' WHERE Ref = '$ref' ;";
     mysqli_query($conn, $rowEdit);
@@ -21,5 +23,5 @@ if($_SERVER['REQUEST_METHOD']=='POST') {
     // $conn->query("UPDATE shopnowdb SET Name ='$name' , Category='$category' , Material= '$material' , Size='$size' , Price='$price' , Stock='$stock' , img='$file' WHERE Ref = '$ref' ;");
     header('Location:index.php');
 }
-
+    
 ?>
