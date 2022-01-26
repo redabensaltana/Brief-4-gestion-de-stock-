@@ -138,6 +138,15 @@ body{
     width: 19px;
 }
 
+.form-control{
+    box-sizing: border-box;
+    padding: 0px 10px;
+    font-family: saira semicondensed;
+    font-size: 16px;
+    font-weight: 500;
+
+}
+
 .form-filter{
     display: flex;
     justify-content: center;

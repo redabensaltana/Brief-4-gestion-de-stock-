@@ -48,9 +48,9 @@ view.forEach(function(element){
         document.querySelector(".catch-ref").textContent = "#"+element.dataset.ref;
         document.querySelector(".catch-material").textContent = element.dataset.material;
         document.querySelector(".catch-category").textContent = element.dataset.category;
-        document.querySelector(".catch-price").textContent = element.dataset.price;
+        document.querySelector(".catch-price").textContent = element.dataset.price+"$";
         document.querySelector(".catch-size").textContent = element.dataset.size;
-        document.querySelector(".catch-stock").textContent = element.dataset.stock;
+        document.querySelector(".catch-stock").textContent = element.dataset.stock+" pcs";
 
     })
 
